@@ -1,8 +1,7 @@
 package test;
 import java.util.Scanner;
 import java.util.Random;
-
-public class Test6_11 {
+public class Test6_12 {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
@@ -12,20 +11,20 @@ public class Test6_11 {
 		
 		int[] a = new int[n];
 		
-		a[0] = 1 + rand.nextInt(10);
-		
-		for (int i=1;i<n;i++) {
-			do {
-				a[i] = 1 + rand.nextInt(10);
-			} while(a[i]==a[i-1]);
+		for (int i=0;i<a.length;i++) {
+			a[i] = 1 + rand.nextInt(10);
 			//a[i] = (int) (1 + Math.random()*10);
-		}	
-		for(int i=0; i<n;i++) {
-			System.out.println("a["+ i + "]= " + a[i]);
+			
+			for(int j=0; j<i;j++) {
+				if (a[i] == a[j]) {
+					i--;
+				}
+			}
 			
 		}
-			
-		
+		for (int i=0;i<n;i++) {
+			System.out.println("a["+i+"] = "+ a[i]);
+		}
 		
 		stdIn.close();
 	}
