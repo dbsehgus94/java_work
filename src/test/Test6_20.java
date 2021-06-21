@@ -8,7 +8,8 @@ public class Test6_20 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("<결과>");
-		System.out.println("불규칙한 2차원 배열을 생성");
+		System.out.println("불규칙한 2차원 배"
+				+ "열을 생성");
 		System.out.print("행 수 : ");
 		int row = sc.nextInt();
 		int [][] c = new int[row][];
